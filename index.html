@@ -1,113 +1,122 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>El Imperio Mexicano - Imperio Mexa</title>
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 20px;
-      background: #f9f9f9;
-      color: #333;
-      max-width: 900px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    header {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-    h1 {
-      color: #005a87;
-    }
-    section {
-      background: white;
-      padding: 20px;
-      margin-bottom: 30px;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-    #map {
-      height: 400px;
-      margin-top: 10px;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-    }
-    a {
-      color: #005a87;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>El Imperio Mexicano - Proyecto Escolar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #fafafa;
+            color: #333;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        nav {
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #004080;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        section {
+            max-width: 900px;
+            margin: 0 auto 40px auto;
+            background-color: #fff;
+            padding: 20px 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 8px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #004080;
+            margin-bottom: 15px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+            margin: 15px auto;
+        }
+        p {
+            line-height: 1.6;
+            font-size: 1.1em;
+        }
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            color: #666;
+            font-size: 0.9em;
+        }
+    </style>
 </head>
 <body>
+    <header>
+        <h1>El Imperio Mexicano</h1>
+        <p>Proyecto escolar sobre la consolidación de México y la historia del Primer Imperio Mexicano.</p>
+    </header>
+    <nav>
+        <a href="#mapa">Mapa del Imperio Mexicano</a>
+        <a href="#introduccion">Introducción</a>
+        <a href="#historia">Historia</a>
+        <a href="#imagenes">Imágenes</a>
+        <a href="#conclusion">Conclusión</a>
+    </nav>
 
-<header>
-  <h1>El Imperio Mexicano</h1>
-  <p>Proyecto escolar sobre la consolidación de México y la historia del Primer Imperio Mexicano.</p>
-</header>
+    <section id="mapa">
+        <h2>Mapa del Primer Imperio Mexicano</h2>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4d/Mexican_Empire_1821-1823_Map.svg" alt="Mapa del Imperio Mexicano" />
+        <p>
+            El Primer Imperio Mexicano (1821-1823) incluía territorios que hoy forman parte de varios estados de México y parte del suroeste de Estados Unidos. 
+            Entre los territorios que perdió está Texas, que tras varias tensiones políticas y sociales, declaró su independencia en 1836, 
+            formando la República de Texas y luego siendo anexada por Estados Unidos en 1845, lo que eventualmente llevó a la guerra entre México y Estados Unidos.
+        </p>
+    </section>
 
-<section id="introduccion">
-  <h2>Introducción</h2>
-  <p>
-    El Primer Imperio Mexicano fue un periodo clave en la historia de México tras la independencia de España. 
-    En este proyecto exploraremos su mapa territorial, hechos históricos importantes y las causas de eventos como la pérdida de Texas.
-  </p>
-</section>
+    <section id="introduccion">
+        <h2>Introducción</h2>
+        <p>
+            El Imperio Mexicano fue la primera organización política independiente que surgió tras la independencia de México en 1821. 
+            Fue un periodo clave para definir las fronteras y el gobierno del nuevo país.
+        </p>
+    </section>
 
-<section id="mapa-estatico">
-  <h2>Mapa del Primer Imperio Mexicano</h2>
-  <img src="ruta-del-mapa.png" alt="Mapa del Imperio Mexicano" style="max-width: 100%; height: auto; border-radius: 8px;" />
-  <p>
-    El Imperio Mexicano abarcaba una extensa región que hoy comprende México y partes de Estados Unidos. 
-    La pérdida de Texas ocurrió en 1836 tras la independencia de esta región, un evento que afectó profundamente la extensión territorial mexicana.
-  </p>
-  <p>
-    <a href="https://es.wikipedia.org/wiki/Independencia_de_Texas" target="_blank" rel="noopener noreferrer">
-      Más información sobre la independencia de Texas
-    </a>
-  </p>
-</section>
+    <section id="historia">
+        <h2>Historia</h2>
+        <p>
+            Tras la independencia de España, México fue gobernado por Agustín de Iturbide como emperador. Su imperio tuvo una duración breve, 
+            pero fue fundamental para el proceso de consolidación del país. Después de la caída del imperio, México pasó a ser una república federal.
+        </p>
+    </section>
 
-<section id="mapa-interactivo">
-  <h2>Mapa Interactivo del Imperio Mexicano</h2>
-  <div id="map"></div>
-  <p>
-    En este mapa interactivo se muestra la extensión aproximada del Primer Imperio Mexicano y la ubicación de Texas, 
-    la región perdida tras la independencia en 1836.
-  </p>
-</section>
+    <section id="imagenes">
+        <h2>Imágenes</h2>
+        <p>Aquí podrías agregar más imágenes relacionadas con el Imperio Mexicano.</p>
+    </section>
 
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script>
-  const map = L.map('map').setView([23.6345, -102.5528], 5); // Centro aproximado de México
+    <section id="conclusion">
+        <h2>Conclusión</h2>
+        <p>
+            El Primer Imperio Mexicano sentó las bases para la independencia y soberanía de México, aunque enfrentó grandes retos y cambios territoriales que marcaron la historia del país.
+        </p>
+    </section>
 
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 18,
-    attribution: '© OpenStreetMap contributors'
-  }).addTo(map);
-
-  // Coordenadas aproximadas del polígono del Imperio Mexicano
-  const empireCoords = [
-    [32.5, -117.0], // Noroeste Baja California
-    [32.5, -86.0],  // Este Texas (aproximado)
-    [14.5, -86.0],  // Sur de Honduras (aproximado)
-    [14.5, -117.0]  // Oeste México
-  ];
-
-  L.polygon(empireCoords, {color: 'blue', fillOpacity: 0.3})
-    .addTo(map)
-    .bindPopup('Primer Imperio Mexicano');
-
-  // Marcador en Texas
-  L.marker([31.9686, -99.9018])
-    .addTo(map)
-    .bindPopup('Texas, región perdida tras la independencia en 1836');
-</script>
-
+    <footer>
+        &copy; 2025 Proyecto Escolar - Hecho por Ti
+    </footer>
 </body>
 </html>
